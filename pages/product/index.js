@@ -22,8 +22,10 @@ export default function Index(props) {
               id="phsort"
               className="col selectpd rwd-select form-select me-3"
             >
-              <option value="Please select">排序</option>
-              <option value>排序</option>
+              <option value="新到舊">新到舊</option>
+              <option value>舊到新</option>
+              <option value>價格:高到低</option>
+              <option value>價格:低到高</option>
             </select>
           </div>
         </div>
@@ -247,16 +249,20 @@ export default function Index(props) {
                   id="perpage"
                   className="col selectpd form-select rwd-none me-3"
                 >
-                  <option value="每頁數量">每頁數量</option>
-                  <option value>每頁數量</option>
+                  <option value="5">每頁5筆</option>
+                  <option value="10">每頁10筆</option>
+                  <option value="15">每頁15筆</option>
+                  <option value="20">每頁20筆</option>
                 </select>
                 <select
                   name="sort"
                   id="sort"
                   className="col rwd-none form-select selectpd"
                 >
-                  <option value="排序">排序</option>
-                  <option value>排序</option>
+                  <option value="新到舊">新到舊</option>
+                  <option value>舊到新</option>
+                  <option value>價格:高到低</option>
+                  <option value>價格:低到高</option>
                 </select>
               </div>
               {/* 商品卡片 導入react 會是一張 跑迴圈出來*/}
@@ -563,7 +569,9 @@ export default function Index(props) {
                 </div>
               </div>
               {/* 頁籤 */}
-              <Pagination />
+              <div className="d-flex justify-content-center align-items-center mt-5">
+                <Pagination />
+              </div>
             </div>
           </div>
         </div>
